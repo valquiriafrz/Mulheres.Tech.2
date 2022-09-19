@@ -1,5 +1,63 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    background-color: pink;
+/*
+Folhas de estilo do site Mulheres.Tech 
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Elementso "root" (raiz) */
+html, body {
+    position: relative;
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    /* Fonte padrão do site */
+    font-family: Tahoma, Verdana, Arial, Helvetiva, sans-serif;
+    /* Tamanho da fonte padrão → lrem */
+    font-size: 16px;
+
+}
+
+a:hover { 
+    color: steelblue;
+    text-decoration:none;
+}
+
+/* Pseudo classe "hover" → Passa o mouse sobre */
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* Elementos semânticos de bloco */
+header, nav, main, article, aside, footer {
+    display: block;
+}
+/* Fundo */
+body{
+    background-attachment: fixed;
+    background-color: rgb(175, 0, 175);
+    background-image: url('/img/bg01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Wrap */
+#Wrap {
+    background-color: aqua;
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* Limita crescimento do bloco */
+    min-width: 280px;
+    max-width: 1024px;
+
+    /* Centraliza bloco */
+    margin: auto;
 }
