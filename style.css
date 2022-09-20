@@ -1,44 +1,47 @@
-/*
-Folhas de estilo do site Mulheres.Tech 
-*/
+/****************************
+ * Folhas de estilo do site *
+ ****************************/
 
-/* Reset */
+/* Reset geral */
 * {
     box-sizing: border-box;
     outline: none;
 }
 
-/* Elementso "root" (raiz) */
+/* Reset dos elementos "root" (raiz) */
 html, body {
     position: relative;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
+
     /* Fonte padrão do site */
-    font-family: Tahoma, Verdana, Arial, Helvetiva, sans-serif;
-    /* Tamanho da fonte padrão → lrem */
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão → 1rem */
     font-size: 16px;
-
 }
 
-a:hover { 
-    color: steelblue;
-    text-decoration:none;
+/* ?Reset dos links */
+a {
+    color: rgb(70, 130, 180);
+    text-decoration: none;
 }
 
-/* Pseudo classe "hover" → Passa o mouse sobre */
+/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
 a:hover {
-    color: orangered;
+    color: rgb(255, 69, 0);
     text-decoration: underline;
 }
 
-/* Elementos semânticos de bloco */
+/* Reset dos elementos semânticos de bloco */
 header, nav, main, article, aside, footer {
     display: block;
 }
-/* Fundo */
-body{
+
+/* Estilização do fundo (background) */
+body {
     background-attachment: fixed;
     background-color: rgb(175, 0, 175);
     background-image: url('/img/bg01.jpg');
@@ -46,18 +49,119 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Wrap */
-#Wrap {
-    background-color: aqua;
-    
+
+/* Wrap → Elemento que envolve os outros elementos da página */
+#wrap {
+
+    /* Tamanho e posicionamento responsivo */
     position: relative;
     width: 100%;
     height: 100%;
 
     /* Limita crescimento do bloco */
+
+    /* 320px - barra de rolagem - segurança */
     min-width: 280px;
+
+    /* 1080px - barra de rolagem - segurança */
     max-width: 1024px;
 
-    /* Centraliza bloco */
+    /* Centraliza bloco inteiro */
     margin: auto;
+
+}
+
+/*************************
+ * Estilizando cabeçalho *
+ *************************/
+
+#wrap>header {
+    background-color: rgba(255, 255, 255, 0.846);
+    display: flex;
+    align-items: center;
+}
+
+#wrap>header a {
+    display: block;
+    font-size: 4rem;
+    color: rgb(255, 176, 255);
+    -webkit-text-stroke: 2px purple;
+    padding: .5rem 1rem .5rem .5rem;
+}
+
+#wrap>header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: purple;
+    text-align: center;
+}
+
+#wrap>header small {
+    display: block;
+    font-size: 1.03rem;
+    font-weight: normal;
+}
+
+/********************************
+ * Estilizando o menu principal *
+ ********************************/
+
+#wrap>nav {
+    background: rgb(66, 0, 66);
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgb(66, 0, 66);
+    border-bottom: 1px solid rgb(66, 0, 66);
+}
+
+#wrap>nav a {
+    display: block;
+    color: rgb(255, 244, 255);
+    padding: .5rem 1rem;
+    text-align: center;
+    transition: .2s;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .35rem;
+}
+
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+#wrap>nav a:hover {
+    background-color: rgb(255, 244, 255);
+    color: rgb(66, 0, 66);
+    text-decoration: none;
+}
+
+/* Tornando o menu principal responsivo */
+/* Para larguras de telas iguais ou maiores que ???px */
+@media (min-width: 480px) {
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+
+}
+
+/**************************
+ * Estilizando o conteúdo *
+ **************************/
+
+#wrap>main {
+    background-color: rgba(255, 255, 255, 1);
+    overflow: auto;
+    padding: 0 1rem;
 }
