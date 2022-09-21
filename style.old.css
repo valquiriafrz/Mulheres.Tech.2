@@ -1,0 +1,187 @@
+/****************************
+ * Folhas de estilo do site *
+ ****************************/
+
+/*
+    Para saber mais, estude e faça os exemplos do site de referência
+    https://www.w3schools.com/css/
+*/
+
+/***************
+ * Reset geral *
+ ***************/
+ * {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Reset dos elementos "root" (raiz) */
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    /* Fonte padrão do site */
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
+    /* Tamanho da fonte padrão → 1rem */
+    font-size: 16px;
+}
+
+/* Reset dos links */
+a {
+    color: rgb(70, 130, 180);
+    text-decoration: none;
+}
+
+/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
+a:hover {
+    color: rgb(255, 69, 0);
+    text-decoration: underline;
+}
+
+/* Reset dos elementos semânticos de bloco */
+header, nav, main, article, aside, footer {
+    display: block;
+}
+
+/* Estilização do fundo (background) */
+body {
+    background-attachment: fixed;
+    background-color: rgb(175, 0, 175);
+    background-image: url('/img/bg01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Wrap → Elemento que envolve os outros elementos visuais da página */
+#wrap {
+
+    /* Posicionamento e tamanho responsivo */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* 
+    Limita crescimento do wrap:
+        • Mínimo de 320px - barra de rolagem - segurança = 280px
+        • Máximo de 1080px - barra de rolagem - segurança = 1024px
+    */
+    min-width: 280px;
+    max-width: 1024px;
+
+    /* Centraliza wrap na viewport */
+    margin: auto;
+}
+
+/*************************
+ * Estilizando cabeçalho *
+ *************************/
+
+#wrap>header {
+    display: flex;
+    align-items: center;
+
+    /* Aplicando transparência com rgba() */
+    background-color: rgba(255, 255, 255, 0.846);
+}
+
+#wrap>header a {
+    display: block;
+    font-size: 4rem;
+    color: rgb(255, 176, 255);
+    padding: .5rem 1rem .5rem .5rem;
+
+    /* Experimental → Aplica borda ao texto */
+    -webkit-text-stroke: 2px purple;
+}
+
+#wrap>header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: purple;
+    text-align: center;
+}
+
+#wrap>header small {
+    display: block;
+    font-size: 1.03rem;
+    font-weight: normal;
+}
+
+/********************************
+ * Estilizando o menu principal *
+ ********************************/
+
+#wrap>nav {
+    background: rgb(66, 0, 66);
+    display: flex;
+    border-top: 1px solid rgb(66, 0, 66);
+    border-bottom: 1px solid rgb(66, 0, 66);
+
+    /* Alinha todos os flex-box à direita */
+    justify-content: flex-end;
+}
+
+#wrap>nav a {
+    display: block;
+    color: rgb(255, 244, 255);
+    padding: .5rem 1rem;
+    text-align: center;
+    transition: .2s;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .35rem;
+}
+
+/* "Empurra" somente o primeiro elemento para a esquerda */
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+/* Ao passar o ponteiro do mouse sobre o item */
+#wrap>nav a:hover {
+    background-color: rgb(255, 244, 255);
+    color: rgb(66, 0, 66);
+    text-decoration: none;
+}
+
+/* 
+    Tornando o menu principal responsivo em larguras
+    de tela iguais ou maiores que 480px
+*/
+@media (min-width: 480px) {
+
+    /* Este bloco só será usado se o requisito acima for verdadeiro */
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+
+}
+
+/**************************
+ * Estilizando o conteúdo *
+ **************************/
+
+#wrap>main {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0 1rem;
+
+    /* Evita efeito da margem do primeiro e ultimo filhos do elemento */
+    overflow: auto;
+}
