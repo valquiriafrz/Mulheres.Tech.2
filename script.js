@@ -22,7 +22,7 @@
 function runApp() {
 
   // Carrega a página inicial do site quando este iniciar:
-  loadPage('home');
+  loadPage('contacts');
 
   /**
    * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 

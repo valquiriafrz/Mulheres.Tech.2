@@ -1,0 +1,62 @@
+/**
+ * Folha de estilos do formuláriop de contatos.
+ **/
+
+#contacts {
+    width: 100%;
+    max-width: 475px;
+    margin: auto;
+}
+
+#contacts label {
+    display: block;
+    margin: 0 0 .25rem .25rem;
+}
+
+#contacts input, #contacts textarea, #contacts button {
+    width: 100%;
+    border-radius: .3rem;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .4rem .5rem;
+}
+
+#contacts textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#contacts button {
+    width: auto;
+    background: linear-gradient(rgb(232, 1, 232), rgb(74, 0, 74));
+    color: white;
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(138, 138, 138, 1);
+    cursor: pointer;
+}
+
+#contacts button:hover {
+    background: linear-gradient(rgb(255, 89, 255), rgb(139, 0, 139));
+}
+
+/* Estilo para campo válido */
+#contacts input:valid, #contacts textarea:valid {
+    background-color: rgb(232, 240, 254);
+    border: 1px solid green;
+    border-bottom: 3px solid green;
+}
+
+
+/* Estilo para campo inválido */
+#contacts input:invalid, #contacts textarea:invalid {
+    background-color: rgb(255, 207, 207);
+    border: 1px solid red;
+    border-bottom: 3px solid red;
+}
+
+/* Estilo para o botão inválido */
+
+#contacts:invalid button {
+    background: linear-gradient(rgb(170, 170, 170), rgb(79, 79, 79));
+    cursor: not-allowed;
+}

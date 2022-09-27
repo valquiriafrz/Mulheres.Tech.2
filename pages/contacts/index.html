@@ -1,13 +1,42 @@
 <!-- Conteúdo principal -->
 <article>
 
-    Faça contato
- 
- </article>
- 
- <!-- Conteúdo complementar / barra lateral -->
- <aside>
- 
-   Conteúdo complementar de contatos
- 
- </aside>
+  <h2>Faça contato</h2>
+  <p>Preencha todos os campos abaixo para enviar um contato para a equipe do <strong>Mulheres.Tech</strong>.</p>
+
+  <form action="" method="post" name="contacts" id="contacts">
+
+    <p>
+      <label for="name">Nome:</label>
+      <input type="text" name="name" id="name" required minlength="3" placeholder="Seu nome completo" class="valid">
+    </p>
+
+    <p>
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" required placeholder="Seu e-mail principal" class="valid">
+    </p>
+
+    <p>
+      <label for="subject">Assunto:</label>
+      <input type="text" name="subject" id="subject" required minlength="5" placeholder="Assunto do contato" class="valid">
+    </p>
+
+    <p>
+      <label for="message">Mensagem:</label>
+      <textarea name="message" id="message" required minlength="5" placeholder="Sua mensagem" class="valid"></textarea>
+    </p>
+
+    <p>
+      <button type="submit">Enviar</button>
+    </p>
+
+  </form>
+
+</article>
+
+<!-- Conteúdo complementar / barra lateral -->
+<aside>
+
+  Conteúdo complementar de contatos
+
+</aside>
