@@ -1,0 +1,62 @@
+.grid {
+    display: grid;
+    column-gap: 1rem;
+}
+
+.card {
+    border: 1px solid purple;
+    border-radius: .5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #eeeeee;
+}
+
+.card h3, .card span {
+    margin: 0;
+    padding: .4rem;
+}
+
+.card span {
+    display: block;
+}
+
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .4rem .4rem 0 0;
+}
+
+/* Lista de imagens das div */
+
+div[data-href="site"] .card-img {
+    background-image: url('/img/logo01.png');
+}
+
+div[data-href="team"] .card-img  {
+    background-image: url('/img/mulherestech.png');
+}
+
+div[data-href="policies"] .card-img  {
+    background-image: url('/img/privacity.png');
+}
+
+div[data-href="contacts"] .card-img  {
+    background-image: url('/img/contacts.jpg');
+}
+
+@media (min-width: 578px) {
+
+    .grid {
+        grid-template-columns: auto auto;
+    }
+
+}
