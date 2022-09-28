@@ -71,8 +71,8 @@ a {
 
 /* Ao passar o mouse sobre um link, usando a pseudo classe ":hover" */
 a:hover {
-  color: rgb(255, 69, 0);
-  text-decoration: underline;
+  color: purple;
+  text-decoration: none;
 }
 
 /* Fundo da página */
@@ -310,9 +310,14 @@ body {
 /* Links do bloco */
 #finf nav a {
   display: block;
-  padding: 0.3rem 0;
+  padding: .3rem;
   font-size: 0.9rem;
   color: rgb(255, 240, 255);
+}
+
+#finf nav a span {
+  display: inline-block;
+  margin-left: .4rem;
 }
 
 /* Links do bloco quando curso passar sobre (:hover) */

@@ -3,4 +3,4 @@
  */
 
 // Define o <title> desta página:
-setTitle();
+setTitle("Quem somos");

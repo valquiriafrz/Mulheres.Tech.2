@@ -6,9 +6,14 @@
 setTitle("Sobre...");
 
 // Detecta clique nos cads
-$('.card').click(getHref)
+$('.card').click(getHref);
 
-// Processa clique nos cads
-|function getHref() {
-    loadPage ($(this) .attr('data-href'))
+// Processa cliques nos cards
+function getHref() {
+    loadPage($(this).attr('data-href'));
 }
+
+reload();
+
+// Monta menu auxiliar:
+$('aside nav').html(aboutMenu);

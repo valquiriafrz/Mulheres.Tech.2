@@ -22,13 +22,13 @@
 function runApp() {
 
   // Carrega a página inicial do site quando este iniciar:
-  loadPage('404');
+  loadPage('policies');
 
   /**
    * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
    * "routerLink":
    **/
-  $('a').click(routerLink);
+   $('a').click(routerLink);
 
 }
 
@@ -99,37 +99,57 @@ function loadPage(href) {
     "js": `/pages/${href}/script.js`
   }
 
-  // Carrega o documento HTML da página na memória:
+  // jQuery → Carrega o documento HTML da página na variável "content":
   $.get(page.html, function (content) {
 
-    // Carrega o CSS da página, no <head> da página "index.html":
+    // jQuery → Carrega o CSS da página, no <head> da "index.html":
     $('#pageCSS').attr('href', page.css);
 
-    // Exibe HTML na página no elemento <main>:
+    // jQuery → Exibe HTML na página no elemento <main>:
     $('#content').html(content);
 
-    //cCarrega e executa o JavaScript da página:
+    // jQuery → Carrega e executa o JavaScript da página:
     $.getScript(page.js);
+
   });
+
+  // Atualiza URL da página:
+  // window.history.pushState({}, "", href);
 
 }
 
-// Função que troca o título da página:
+/**
+ * setTitle() → Aplicativo que troca o <title> do documento conforme cada 
+ * página é acessada. Para isso, inclua a chamada "setTitle('Titulo')" em cada
+ * arquivo "script.js" de cada página.
+ */
 function setTitle(title = '') {
 
-  // Se não definiu um title...
+  // Se não definiu um valor para title...
   if (title == '') {
 
-    // Título padrão da página será nomeDoSite + sloganDoSite:
+    // jQuery → Título padrão da página será nomeDoSite + sloganDoSite:
     $('title').html("Mulheres.Tech .:. Programadoras do Futuro");
+
+    // Se definiu "title"...
   } else {
 
-    // Título da página será nomeDoSite + nomeDaPágina:
+    // jQuery → Título da página será nomeDoSite + nomeDaPágina:
     $('title').html("Mulheres.Tech .:. " + title);
 
   }
 
 }
+
+/**
+ * Cria o menu de navegação complementar de sobre:
+ */
+var aboutMenu = `
+<a href="site"><i class="fa-solid fa-globe fa-fw"></i><span>Sobre o site</span></a>
+<a href="team"><i class="fa-solid fa-users fa-fw"></i><span>Quem somos</span></a>
+<a href="policies"><i class="fa-solid fa-user-lock fa-fw"></i><span>Sua privacidade</span></a>
+<a href="contacts"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
+`;
 
 // jQuery → Executa aplicativo "runApp" quando o documento estiver pronto:
 $(document).ready(runApp);

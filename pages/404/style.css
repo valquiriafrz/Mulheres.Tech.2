@@ -1,21 +1,28 @@
-article img{
+article img {
     display: block;
     margin: auto;
     width: 100%;
     max-width: 512px;
 }
 
-article p{
+article p {
     text-align: center;
+}
+
+.links {
+    display: table;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
 .links a {
     display: flex;
-    padding: .4rem;
+    padding: .3rem;
+    align-items: center;
 }
 
 .links a i {
-font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .links a span {

@@ -1,0 +1,23 @@
+aside nav {
+    display: table;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+aside nav a {
+    display: flex;
+    padding: .4rem 0;
+}
+
+aside nav a:hover {
+    text-decoration: none;
+}
+
+aside nav i {
+    font-size: 1.3rem;
+}
+
+aside nav a span {
+    display: inline-block;
+    margin-left: .4rem;
+}

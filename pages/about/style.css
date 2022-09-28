@@ -41,15 +41,15 @@ div[data-href="site"] .card-img {
     background-image: url('/img/logo01.png');
 }
 
-div[data-href="team"] .card-img  {
+div[data-href="team"] .card-img {
     background-image: url('/img/mulherestech.png');
 }
 
-div[data-href="policies"] .card-img  {
+div[data-href="policies"] .card-img {
     background-image: url('/img/privacity.png');
 }
 
-div[data-href="contacts"] .card-img  {
+div[data-href="contacts"] .card-img {
     background-image: url('/img/contacts.jpg');
 }
 
@@ -59,4 +59,28 @@ div[data-href="contacts"] .card-img  {
         grid-template-columns: auto auto;
     }
 
+}
+
+aside nav {
+    display: table;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+aside nav a {
+    display: flex;
+    padding: .4rem 0;
+}
+
+aside nav a:hover {
+    text-decoration: none;
+}
+
+aside nav i {
+    font-size: 1.3rem;
+}
+
+aside nav a span {
+    display: inline-block;
+    margin-left: .4rem;
 }
