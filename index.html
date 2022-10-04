@@ -25,31 +25,32 @@
   <link rel="stylesheet" href="" id="pageCSS">
 
   <!-- 
-      Importa a biblioteca Font Awesome via CDN
-      Para saber mais:
-        • https://fontawesome.com/
-    -->
+    Importa a biblioteca Font Awesome via CDN
+    Para saber mais:
+      • https://fontawesome.com/
+  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
   <!-- Título do documento -->
   <title>Mulheres.Tech</title>
+
 </head>
 
 <!-- 
-    Corpo do documento (viewport)
-    Para saber mais:
-      • https://www.w3schools.com/css/css_rwd_viewport.asp
-  -->
+  Corpo do documento (viewport)
+  Para saber mais:
+    • https://www.w3schools.com/css/css_rwd_viewport.asp
+-->
 
 <body>
   <!-- Âncora do início da página -->
   <a id="top"></a>
 
   <!-- 
-      Container da página:
-      Este elemento permite limitar o tamanho mínimo e máximo da página
-      e também centraliza ela na tela.
-    -->
+    Container da página:
+    Este elemento permite limitar o tamanho mínimo e máximo da página
+    e também centraliza ela na tela.
+  -->
   <div id="wrap">
     <!-- Cabeçalho da página -->
     <header>
@@ -66,12 +67,12 @@
     </header>
 
     <!--
-        Menu principal:
-          / → Raiz do aplicativo → Será carregada a "index.html";
-          /contacts → Página com formulário e links de contato;
-          /about → Sobre o site, autor e privacidade;
-          /profile → Gestão do usuário (login, logou, perfil, ...).
-       -->
+      Menu principal:
+        / → Raiz do aplicativo → Será carregada a "index.html";
+        /contacts → Página com formulário e links de contato;
+        /about → Sobre o site, autor e privacidade;
+        /profile → Gestão do usuário (login, logou, perfil, ...).
+    -->
     <nav>
       <!-- Link do item de menu para a página especificada -->
       <a href="home" title="Página inicial">
@@ -82,30 +83,55 @@
       </a>
 
       <!-- 
-          Outros itens do menu. 
-          Tem a mesma estrutura do anterior. 
-        -->
+        Outros itens do menu. 
+        Tem a mesma estrutura do anterior. 
+      -->
 
-      <a href="contacts" title="Faça contato">
+      <a href="contacts" title="Faça contato" class="dropable">
         <i class="fa-solid fa-comments fa-fw"></i>
         <span>Contatos</span>
       </a>
 
-      <a href="about" title="Sobre a gente">
+      <a href="about" title="Sobre a gente" class="dropable">
         <i class="fa-solid fa-circle-info fa-fw"></i>
         <span>Sobre</span>
       </a>
 
-      <a href="profile" title="Perfil de usuário">
+      <a href="profile" title="Perfil de usuário" class="dropable">
         <i class="fa-regular fa-user fa-fw"></i>
         <span>Perfil</span>
       </a>
+
+      <!--
+        Botão que controla o menu dropdown:
+        Este botão só aparece em resoluções menores (mobile frist).
+        Observe que 'href="menu"', para que seja identificado pelo JavaScript.
+      -->
+      <a href="menu" id="btnMenu" title="Abre/fecha menu">
+        <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>
+      </a>
     </nav>
 
+    <!-- Menu dropdown: Adicione itens ao menu aqui. -->
+    <div id="dropable">
+      <nav>
+        <a href="profile" title="Perfil de usuário"><i class="fa-regular fa-user fa-fw"></i><span>Perfil</span></a>
+        <!-- Separador -->
+        <hr>
+        <a href="search" title="Procurar no site"><i class="fa-solid fa-magnifying-glass fa-fw"></i><span>Procurar</span></a>
+        <hr>
+        <a href="contacts" title="Faça contato"><i class="fa-solid fa-comments fa-fw"></i><span>Contatos</span></a>
+        <a href="about" title="Sobre a gente..."><i class="fa-solid fa-circle-info fa-fw"></i><span>Sobre</span></a>
+        <a href="site" title="Sobre o site..."><i class="fa-solid fa-globe fa-fw"></i><span>Sobre o site</span></a>
+        <a href="team" title="Quem somos..."><i class="fa-solid fa-users fa-fw"></i><span>Quem somos</span></a>
+        <a href="policies" title="Políticas de Privacidade"><i class="fa-solid fa-user-lock fa-fw"></i><span>Sua privacidade</span></a>
+      </nav>
+    </div>
+
     <!-- 
-        Bloco do conteúdo.
-        Este bloco terá um conteúdo diferente para cada página acessada.
-      -->
+      Bloco do conteúdo.
+      Este bloco terá um conteúdo diferente para cada página acessada.
+    -->
     <main id="content"></main>
 
     <!-- Rodapé -->
@@ -131,15 +157,15 @@
         <!-- Menu de redes sociais -->
         <nav>
           <h4>Redes sociais:</h4>
-          <a href="https://facebook.com/Luferat" target="_blank" title="Acesse nosso Facebook">
+          <a href="https://facebook.com/Mulheres.Tech" target="_blank" title="Acesse nosso Facebook">
             <i class="fa-brands fa-square-facebook fa-fw"></i>
             <span>Facebook</span>
           </a>
-          <a href="https://youtube.com/Luferat" target="_blank" title="Nosso canal no Youtube">
+          <a href="https://youtube.com/Mulheres.Tech" target="_blank" title="Nosso canal no Youtube">
             <i class="fa-brands fa-square-youtube fa-fw"></i>
             <span>Youtube</span>
           </a>
-          <a href="https://github.com/Luferat" target="_blank" title="Nossa página no GitHub">
+          <a href="https://github.com/Mulheres.Tech" target="_blank" title="Nossa página no GitHub">
             <i class="fa-brands fa-square-github fa-fw"></i>
             <span>GitHub</span>
           </a>
@@ -170,12 +196,31 @@
     <!-- Fecha o wrap -->
   </div>
 
+  <!-- Mensagem sobre o uso de cookies -->
+  <div id="acCookies">
+
+    <div class="cookieBody">
+
+      <div class="cookieBox">
+
+        <div>
+          Usamos cookies para lhe fornecer uma experiência de navegação melhor e mais segura.
+          Não se preocupe, todos os seus dados pessoais estão protegidos.
+        </div>
+        <button id="accept">Entendi!</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
   <!--
-      Importa a biblioteca JavaScript "jQuery" via CDN
-      Para saber mais:
-        • https://jquery.com/
-        • https://www.w3schools.com/jquery/
-    -->
+    Importa a biblioteca JavaScript "jQuery" via CDN
+    Para saber mais:
+      • https://jquery.com/
+      • https://www.w3schools.com/jquery/
+  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- Inclui o JavaScript do aplicativo, que depende de "jQuery" -->
