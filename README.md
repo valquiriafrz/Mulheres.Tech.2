@@ -1,2 +1,2 @@
-# Mulheres.Tech
- Primeiro site da turma Mulheres.Tech 2022.1.
+# Mulheres.Tech.2
+ Versão fullstack do aplicativo Mulheres.Tech.
